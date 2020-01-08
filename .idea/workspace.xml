@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="575b7f65-f611-4633-8dc4-4408ebb93cfc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/inbox/contracts/ColoredLending.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inbox/contracts/ColoredLending2.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inbox/contracts/ColoredLendingORIGIN.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inbox/contracts/Shit2.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inbox/test/ColoredLending.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inbox/compile.js" beforeDir="false" afterPath="$PROJECT_DIR$/inbox/compile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inbox/contracts/Shit.sol" beforeDir="false" afterPath="$PROJECT_DIR$/inbox/contracts/Shit.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inbox/test/Inbox.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/inbox/test/Inbox.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inbox/contracts/ColoredLending.sol" beforeDir="false" afterPath="$PROJECT_DIR$/inbox/contracts/ColoredLending.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inbox/contracts/Shit.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inbox/test/ColoredLending.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/inbox/test/ColoredLending.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +52,22 @@
       <recent name="C:\Users\oboro\WebstormProjects\Inbox" />
     </key>
   </component>
-  <component name="RunManager" selected="Mocha.ColoredLending.transfer, sender can not transfer more money, that it has, sender can spend money only on a special category of goods">
+  <component name="RunManager" selected="Mocha.ColoredLending">
+    <configuration name="ColoredLending" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/inbox/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$/inbox</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/inbox/test/ColoredLending.test.js</test-file>
+      <test-names>
+        <name value="ColoredLending" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="ColoredLending.addNewMarketAccount, only owner can do it" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -90,7 +100,7 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="ColoredLending.only owner can mint" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+    <configuration name="ColoredLending.transferFrom" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/inbox/node_modules/mocha</mocha-package>
@@ -102,7 +112,7 @@
       <test-file>$PROJECT_DIR$/inbox/test/ColoredLending.test.js</test-file>
       <test-names>
         <name value="ColoredLending" />
-        <name value="only owner can mint" />
+        <name value="transferFrom" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -122,28 +132,13 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Inbox (1)" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/inbox/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$/inbox</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>SUITE</test-kind>
-      <test-file>$PROJECT_DIR$/inbox/test/ColoredLending.test.js</test-file>
-      <test-names>
-        <name value="Inbox" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Mocha.ColoredLending" />
+        <item itemvalue="Mocha.ColoredLending.transferFrom" />
         <item itemvalue="Mocha.ColoredLending.transfer, sender can not transfer more money, that it has, sender can spend money only on a special category of goods" />
         <item itemvalue="Mocha.ColoredLending.loanColoredMoney, only owner can do it, owner can not lent more money, that it has " />
         <item itemvalue="Mocha.ColoredLending.addNewMarketAccount, only owner can do it" />
-        <item itemvalue="Mocha.ColoredLending.only owner can mint" />
-        <item itemvalue="Mocha.Inbox (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +169,7 @@
       <workItem from="1578162942971" duration="3144000" />
       <workItem from="1578166970371" duration="262000" />
       <workItem from="1578228563846" duration="1903000" />
-      <workItem from="1578221134756" duration="27084000" />
+      <workItem from="1578221134756" duration="28111000" />
     </task>
     <task id="LOCAL-00001" summary="some shit">
       <created>1578431422820</created>
@@ -183,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578431422820</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ColoredLending contract add&#10;Test mint, addNewMarketAccount, loanColoredMoney, transfer work fine&#10;You must add all about transferFrom test in next commits">
+      <created>1578504784248</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578504784248</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,42 +193,48 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="some shit" />
-    <option name="LAST_COMMIT_MESSAGE" value="some shit" />
+    <MESSAGE value="ColoredLending contract add&#10;Test mint, addNewMarketAccount, loanColoredMoney, transfer work fine&#10;You must add all about transferFrom test in next commits" />
+    <option name="LAST_COMMIT_MESSAGE" value="ColoredLending contract add&#10;Test mint, addNewMarketAccount, loanColoredMoney, transfer work fine&#10;You must add all about transferFrom test in next commits" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="23" key="#Plugins" timestamp="1578044369430">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="23" key="#Plugins/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578044369430" />
-    <state x="298" y="0" key="CommitChangelistDialog2" timestamp="1578431316821">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1785" y="-115" key="CommitChangelistDialog2" timestamp="1578504781675">
+      <screen x="1366" y="-115" width="1920" height="1040" />
     </state>
     <state x="298" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578431316821" />
+    <state x="1785" y="-115" key="CommitChangelistDialog2/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578504781675" />
+    <state x="1606" y="-14" key="DiffContextDialog" timestamp="1578504775441">
+      <screen x="1366" y="-115" width="1920" height="1040" />
+    </state>
+    <state x="1606" y="-14" key="DiffContextDialog/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578504775441" />
     <state x="2017" y="36" key="FileChooserDialogImpl" timestamp="1578490228292">
       <screen x="1366" y="-115" width="1920" height="1040" />
     </state>
     <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578163016053" />
     <state x="2017" y="36" key="FileChooserDialogImpl/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578490228292" />
-    <state width="1899" height="405" key="GridCell.Tab.0.bottom" timestamp="1578504513498">
+    <state width="1899" height="405" key="GridCell.Tab.0.bottom" timestamp="1578508136255">
       <screen x="1366" y="-115" width="1920" height="1040" />
     </state>
     <state width="1345" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578164229854" />
-    <state width="1899" height="405" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578504513498" />
-    <state width="1899" height="405" key="GridCell.Tab.0.center" timestamp="1578504513497">
+    <state width="1899" height="405" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578508136255" />
+    <state width="1899" height="405" key="GridCell.Tab.0.center" timestamp="1578508136254">
       <screen x="1366" y="-115" width="1920" height="1040" />
     </state>
     <state width="1345" height="223" key="GridCell.Tab.0.center/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578164229853" />
-    <state width="1899" height="405" key="GridCell.Tab.0.center/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578504513497" />
-    <state width="1899" height="405" key="GridCell.Tab.0.left" timestamp="1578504513497">
+    <state width="1899" height="405" key="GridCell.Tab.0.center/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578508136254" />
+    <state width="1899" height="405" key="GridCell.Tab.0.left" timestamp="1578508136254">
       <screen x="1366" y="-115" width="1920" height="1040" />
     </state>
     <state width="1345" height="223" key="GridCell.Tab.0.left/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578164229853" />
-    <state width="1899" height="405" key="GridCell.Tab.0.left/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578504513497" />
-    <state width="1899" height="405" key="GridCell.Tab.0.right" timestamp="1578504513497">
+    <state width="1899" height="405" key="GridCell.Tab.0.left/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578508136254" />
+    <state width="1899" height="405" key="GridCell.Tab.0.right" timestamp="1578508136254">
       <screen x="1366" y="-115" width="1920" height="1040" />
     </state>
     <state width="1345" height="223" key="GridCell.Tab.0.right/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578164229854" />
-    <state width="1899" height="405" key="GridCell.Tab.0.right/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578504513497" />
+    <state width="1899" height="405" key="GridCell.Tab.0.right/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578508136254" />
     <state width="1899" height="424" key="GridCell.Tab.1.bottom" timestamp="1578489075325">
       <screen x="1366" y="-115" width="1920" height="1040" />
     </state>

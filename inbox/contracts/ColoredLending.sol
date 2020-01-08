@@ -32,6 +32,8 @@ contract ColoredLending {
 
     mapping(address => mapping(string => uint))  balancesSpecial;
 
+    mapping(address => mapping(address => mapping(string => uint))) balancesSpecialAllowed;
+
     mapping(address => string) specialGoodsMarketAddresses;
 
     function mint(address _to, uint _value) public onlyOwner {
@@ -51,7 +53,7 @@ contract ColoredLending {
                 balances[msg.sender] -= _value;
                 balances[_to] += _value;
 
-                if(owner != msg.sender) {
+                if (owner != msg.sender) {
                     balancesSpecial[msg.sender][specialGoodsMarketAddresses[_to]] -= _value;
                 }
                 balancesSpecial[_to][specialGoodsMarketAddresses[_to]] += _value;
@@ -64,14 +66,15 @@ contract ColoredLending {
     }
 
     function transferFrom(address _from, address _to, uint _value) public returns (bool success) {
-        if (balancesSpecial[msg.sender][specialGoodsMarketAddresses[_to]] >= _value || owner == msg.sender) {
-            if (allowed[_from][msg.sender] >= _value && balances[_from] >= _value && balances[_to] + _value >= balances[_to]) {
-                allowed[_from][msg.sender] -= _value;
+        if (balancesSpecial[_from][specialGoodsMarketAddresses[_to]] >= _value || owner == msg.sender) {
+            if (allowed[_from][_to] >= _value && balances[_from] >= _value && balances[_to] + _value >= balances[_to]) {
+                allowed[_from][_to] -= _value;
                 balances[_from] -= _value;
                 balances[_to] += _value;
 
-                if(owner != msg.sender) {
+                if (owner != msg.sender) {
                     balancesSpecial[_from][specialGoodsMarketAddresses[_to]] -= _value;
+                    balancesSpecialAllowed[_from][_to][specialGoodsMarketAddresses[_to]] -= _value;
                 }
                 balancesSpecial[_to][specialGoodsMarketAddresses[_to]] += _value;
 
@@ -79,25 +82,12 @@ contract ColoredLending {
                 return true;
             }
         }
-
-        if(owner == msg.sender && balances[msg.sender] >= _value && balances[_to] + _value >= balances[_to]) {
-            if (allowed[_from][msg.sender] >= _value && balances[_from] >= _value && balances[_to] + _value >= balances[_to]) {
-                balances[msg.sender] -= _value;
-                balances[_to] += _value;
-
-                balancesSpecial[_to][specialGoodsMarketAddresses[_to]] += _value;
-
-                Transfer(msg.sender, _to, _value);
-                return true;
-            }
-
-        }
-
         return false;
     }
 
     function approve(address _spender, uint _value) public returns (bool success) {
         allowed[msg.sender][_spender] = _value;
+        balancesSpecialAllowed[msg.sender][_spender][specialGoodsMarketAddresses[_spender]] = _value;
         Approval(msg.sender, _spender, _value);
         return true;
     }
@@ -106,26 +96,30 @@ contract ColoredLending {
         return allowed[_owner][_spender];
     }
 
-    function addNewMarketAccount(address _newMarket, string _goodKind) public onlyOwner  {
+    function addNewMarketAccount(address _newMarket, string _goodKind) public onlyOwner {
         specialGoodsMarketAddresses[_newMarket] = _goodKind;
     }
 
-    function loanColoredMoney(address _to, string _goodKind, uint _value) public onlyOwner{
+    function loanColoredMoney(address _to, string _goodKind, uint _value) public onlyOwner {
         require(balances[owner] >= _value && balances[_to] + _value >= balances[_to]);
-//        if(balances[owner] >= _value && balances[_to] + _value >= balances[_to]) {
+        //        if(balances[owner] >= _value && balances[_to] + _value >= balances[_to]) {
         balances[owner] -= _value;
         balances[_to] += _value;
         balancesSpecial[_to][_goodKind] += _value;
-//        }
+        //        }
     }
 
 
-    function getAccountSpecialBalance(address _accountAddress, string _goodKind) public constant returns(uint balance) {
+    function getAccountSpecialBalance(address _accountAddress, string _goodKind) public constant returns (uint balance) {
         return balancesSpecial[_accountAddress][_goodKind];
     }
 
-    function getGoodsKind(address _marketAddress) public constant returns(string goodsKind) {
+    function getGoodsKind(address _marketAddress) public constant returns (string goodsKind) {
         return specialGoodsMarketAddresses[_marketAddress];
+    }
+
+    function getAccountSpecialAllowance(address _owner, address _spender, string _goodKind) public constant returns (uint balance) {
+        return balancesSpecialAllowed[_owner][_spender][_goodKind];
     }
 
     event Transfer(address indexed _from, address indexed _to, uint _value);
