@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="575b7f65-f611-4633-8dc4-4408ebb93cfc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inbox/contracts/ColoredLending.sol" beforeDir="false" afterPath="$PROJECT_DIR$/inbox/contracts/ColoredLending.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inbox/contracts/Shit.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inbox/test/ColoredLending.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/inbox/test/ColoredLending.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inbox/compile.js" beforeDir="false" afterPath="$PROJECT_DIR$/inbox/compile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inbox/contracts/Inbox.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inbox/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/inbox/deploy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inbox/test/Inbox.test.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,34 +207,35 @@
     </state>
     <state x="298" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578431316821" />
     <state x="1785" y="-115" key="CommitChangelistDialog2/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578504781675" />
-    <state x="1606" y="-14" key="DiffContextDialog" timestamp="1578504775441">
-      <screen x="1366" y="-115" width="1920" height="1040" />
+    <state x="171" y="71" width="1092" height="608" key="DiffContextDialog" timestamp="1578607708271">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="171" y="71" width="1092" height="608" key="DiffContextDialog/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578607708271" />
     <state x="1606" y="-14" key="DiffContextDialog/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578504775441" />
     <state x="2017" y="36" key="FileChooserDialogImpl" timestamp="1578490228292">
       <screen x="1366" y="-115" width="1920" height="1040" />
     </state>
     <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578163016053" />
     <state x="2017" y="36" key="FileChooserDialogImpl/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578490228292" />
-    <state width="1899" height="405" key="GridCell.Tab.0.bottom" timestamp="1578508136255">
-      <screen x="1366" y="-115" width="1920" height="1040" />
+    <state width="1345" height="273" key="GridCell.Tab.0.bottom" timestamp="1578607646183">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578164229854" />
+    <state width="1345" height="273" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578607646183" />
     <state width="1899" height="405" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578508136255" />
-    <state width="1899" height="405" key="GridCell.Tab.0.center" timestamp="1578508136254">
-      <screen x="1366" y="-115" width="1920" height="1040" />
+    <state width="1345" height="273" key="GridCell.Tab.0.center" timestamp="1578607646182">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="223" key="GridCell.Tab.0.center/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578164229853" />
+    <state width="1345" height="273" key="GridCell.Tab.0.center/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578607646182" />
     <state width="1899" height="405" key="GridCell.Tab.0.center/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578508136254" />
-    <state width="1899" height="405" key="GridCell.Tab.0.left" timestamp="1578508136254">
-      <screen x="1366" y="-115" width="1920" height="1040" />
+    <state width="1345" height="273" key="GridCell.Tab.0.left" timestamp="1578607646182">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="223" key="GridCell.Tab.0.left/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578164229853" />
+    <state width="1345" height="273" key="GridCell.Tab.0.left/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578607646182" />
     <state width="1899" height="405" key="GridCell.Tab.0.left/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578508136254" />
-    <state width="1899" height="405" key="GridCell.Tab.0.right" timestamp="1578508136254">
-      <screen x="1366" y="-115" width="1920" height="1040" />
+    <state width="1345" height="273" key="GridCell.Tab.0.right" timestamp="1578607646183">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="223" key="GridCell.Tab.0.right/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578164229854" />
+    <state width="1345" height="273" key="GridCell.Tab.0.right/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578607646183" />
     <state width="1899" height="405" key="GridCell.Tab.0.right/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578508136254" />
     <state width="1899" height="424" key="GridCell.Tab.1.bottom" timestamp="1578489075325">
       <screen x="1366" y="-115" width="1920" height="1040" />
@@ -295,6 +297,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="7" key="SettingsEditor/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578162997908" />
+    <state x="448" y="69" key="VCS.ChangeListViewerDialog" timestamp="1578607699862">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="448" y="69" key="VCS.ChangeListViewerDialog/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578607699862" />
     <state x="1882" y="-115" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578487759612">
       <screen x="1366" y="-115" width="1920" height="1040" />
     </state>
@@ -304,38 +310,13 @@
       <screen x="1366" y="-115" width="1920" height="1040" />
     </state>
     <state x="2023" y="3" width="606" height="804" key="find.popup/0.0.1366.728/1366.-115.1920.1040@1366.-115.1920.1040" timestamp="1578503410651" />
+    <state x="469" y="213" key="git4idea.ui.GitUnstashDialog" timestamp="1578607701540">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="469" y="213" key="git4idea.ui.GitUnstashDialog/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578607701540" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1578044298605">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.-115.1920.1040@0.0.1366.728" timestamp="1578044298605" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/inbox/test/Inbox.test.js</url>
-          <line>2</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/inbox/test/Inbox.test.js</url>
-          <line>27</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/inbox/test/Inbox.test.js</url>
-          <line>13</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/inbox/test/Inbox.test.js</url>
-          <line>22</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
